@@ -1,0 +1,88 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat-item {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e4e4e4;
+  background-color: #fafafa;
+  background-size: 10%;
+}
+
+.check-mark {
+    color: green;
+    position: absolute;
+    top: 53px;
+    left: 54px;
+}
+
+.chat-item-about {
+  position: absolute;
+  left: 75px;
+  top: 15px;
+}
+
+.chat-item-about h5, p {
+  margin: 5px;
+}
+
+.chat-item-time {
+    float: right;
+    color: #686767;
+    font-weight: 500;
+    font-size: 14px;
+    position: inherit;
+    top: 25px;
+}
+
+.chat-item-info {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 15px;
+  color: #6d6b6b;
+}
+
+.button-container {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.edit-button {
+  color: rgb(38, 171, 254);
+  font-size: 12px;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  padding: 3px 6px;
+  margin-right: 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.edit-button:hover {
+  font-size: 14px;
+  color: rgba(38, 171, 254, 0.5);
+}
+
+.delete-button {
+  color: #c33838;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  padding: 3px 6px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
