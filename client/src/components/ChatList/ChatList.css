@@ -1,0 +1,88 @@
+.chat-list {
+  width: 40%;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+}
+
+.chat-list-header {
+  border-bottom: 1px solid #ccc;
+  height: 6.5rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 1px;
+  border-radius: 20px;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e4e4e4;
+  background-color: #fafafa;
+  background-size: 10%;
+}
+
+.check-mark {
+  color: green;
+  position: absolute;
+  top: 53px;
+  left: 54px;
+}
+
+.send-button {
+  font-weight: 800;
+  color: rgb(38, 171, 254);
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.4s;
+  float: right;
+}
+
+.send-button:hover {
+  color: #fff;
+  background-color: #74b6db;
+}
+
+.add {
+  color: rgb(158, 158, 158);
+  margin-left: 5px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 88px;
+  left: 25px;
+  font-size: 17px;
+  padding: 1px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+
+input:focus {
+  outline: none;
+}
+
+.chat-list-title {
+  color: #74b6db;
+  font-weight: 500;
+  padding: 0 1rem;
+}

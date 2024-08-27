@@ -1,0 +1,72 @@
+.chat-form {
+  width: auto;
+  position: absolute;
+  top: 17px;
+  left: 250px;
+  z-index: 999;
+}
+
+.chat-form-input {
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.chat-form-button-submit {
+  font-size: 700;
+  color: rgb(38, 171, 254);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.chat-form-button-submit:hover {
+  font-weight: 700;
+  color: #74b6db;
+  border: none;
+}
+
+.chat-form-button-cancel {
+  font-size: 700;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: salmon;
+  background-color: #fff;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.chat-form-button-cancel:hover {
+  font-weight: 700;
+  color: #fff;
+  background-color: #74b6db;
+  border: none;
+}
+
+.chat-add-button {
+  border: none;
+  border-radius: 15px;
+  font-weight: 800;
+  color: rgb(38, 171, 254);
+  background-color: transparent;
+  padding: 4px 7px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.4s;
+  margin-left: 285px;
+  position: absolute;
+  top: 15px;
+  left: 195px;
+  z-index: 999;
+}
+
+.chat-add-button:hover {
+  color: #fff;
+  background-color: #74b6db;
+}
+
+.chat-add-button-icon {
+  font-size: 20px;
+}

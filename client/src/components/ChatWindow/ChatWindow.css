@@ -1,0 +1,41 @@
+.chat-window {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-window-text {
+    padding: 5px;
+    width: 35%;
+    font-size: 16px;
+    color: #1a1919;
+    background-color: #ccc;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 600;
+    margin: auto;
+}
+
+.chat-header-user {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 15px;
+}
+
+.chat-header-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.chat-header-photo {
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.chat-messages {
+    border-bottom: 1px solid #ccc;
+    height: 88vh;
+    padding: 5px 12px;
+}
