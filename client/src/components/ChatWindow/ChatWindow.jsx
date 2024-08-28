@@ -52,7 +52,8 @@ export const ChatWindow = ({ selectedChat, messages, onSendMessage }) => {
   }, [selectedChat]);
 
   if (selectedChat) {
-    console.log(selectedChat.id);
+    console.log(selectedChat); // users id
+
     return (
       <>
       <div className="chat-window">

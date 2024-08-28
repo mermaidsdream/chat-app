@@ -37,7 +37,6 @@ export const ChatList = ({ chats, onSelectChat, searchItem, searchHandler, onDel
       </div>
       <h2 className="chat-list-title"><span>Chats</span></h2>
       <ChatItem
-        key={chats.id}
         chats={chats}
         onSelectChat={onSelectChat}
         onDeleteChat={onDeleteChat}

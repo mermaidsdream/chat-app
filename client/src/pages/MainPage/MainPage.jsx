@@ -19,6 +19,7 @@ export const MainPage = () => {
     const getChats = async () => {
       try {
         const data = await fetchChats();
+        console.log("I am chats ", data); // debugging
         setChats(data);
       } catch (error) {
         console.error('Error fetching chats:', error);
@@ -27,12 +28,19 @@ export const MainPage = () => {
     getChats();
   }, []);
 
-  const handleSelectChat = async (chat) => {
-    setSelectedChat(chat);
-    console.log("I am handle select chat ", chat.id)
+  const handleSelectChat = async (id, chats) => {
+    console.log("Passed id ", id);
+    if (!id) {
+      console.error("Chat ID is undefined or null");
+      return;
+    }
+
+    setSelectedChat(id);
+    console.log("Selected chat:", id);
+
     try {
-      const chatMessages = await fetchMessagesByChatId(chat.id);
-      console.log("I am chatMessages :", chatMessages);
+      const chatMessages = await fetchMessagesByChatId(id);
+      console.log("Fetched chat messages:", chatMessages);
       setMessages(chatMessages);
     } catch (error) {
       console.error('Error fetching chat messages:', error);

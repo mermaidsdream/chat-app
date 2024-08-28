@@ -7,9 +7,9 @@ import Message from '../models/Message.mjs';
 const router = express.Router();
 
 // Send a message
-router.post('/', async (req, res) => {
+router.post('/:chatId/messages', async (req, res) => {
   const { chatId, sender, text } = req.body;
-  console.log("I am chatId from send a message ", chatId);
+
   try {
     const newMessage = await Message.create({ chatId, sender, text });
     await Chat.findByIdAndUpdate(chatId, { $push: { messages: newMessage._id } });
@@ -21,9 +21,9 @@ router.post('/', async (req, res) => {
 });
 
 // Handle message sending
-router.post('/send-message', async (req, res) => {
+router.post('/:chatId/messages', async (req, res) => {
   const { chatId, message } = req.body;
-  console.log("I am chatId from handle sending a message ", chatId);
+
   try {
     // Save the message to the chat
     const chat = await Chat.findById(chatId);
@@ -51,4 +51,3 @@ router.post('/send-message', async (req, res) => {
 });
 
 export default router;
-

@@ -19,7 +19,7 @@ export const MessageInput = ({ chatId, onSendMessage, selectedChat }) => {
     if (message.trim() === '') return; // Prevent sending empty messages
 
     try {
-      const response = await axios.post('/api/:chatId/messages', { //http://localhost:5000/api/messages
+      const response = await axios.post(`/api/chats/${selectedChat.id}/messages`, { //http://localhost:5000/api/messages
         chatId: selectedChat.id,
         sender: selectedChat.name, // the actual sender
         text: message,
@@ -33,7 +33,7 @@ export const MessageInput = ({ chatId, onSendMessage, selectedChat }) => {
     } catch (error) {
       console.error('Failed to send message', error);
     }
-
+    onSendMessage(message); // Sending message to users, waiting for response
     setMessage(''); // Clear the input field after sending
   };
 

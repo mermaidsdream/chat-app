@@ -28,7 +28,14 @@ io.on('connection', (socket) => {
 });
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'http://localhost:3000' })); // to delete
+// app.use(cors(
+//   {
+//     origin: ["https://chat-app-full-stack.vercel.app"],
+//     methods: ["POST", "GET"],
+//     credentials: false
+//   }
+// ));
 app.use(express.json());
 
 // Connect to MongoDB

@@ -1,5 +1,6 @@
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { RiDeleteBin2Fill } from "react-icons/ri";
+import { v4 as uuidv4 } from 'uuid';
 
 import avatar from '../../assets/images/avatar.png';
 import './ChatItem.css';
@@ -24,7 +25,7 @@ export const ChatItem = ({ chats, onSelectChat, onDeleteChat, onEditChat }) => {
     <>
         <ul>
         {chats.map((chat) => (
-          <li key={chat.id} onClick={() => onSelectChat(chat)}>
+          <li key={uuidv4()} onClick={() => onSelectChat(chat.id)}>
             <div className="chat-item">
               <img src={avatar} alt={`${chat.name} avatar`} className='avatar-img' />
               <IoCheckmarkCircleOutline className="check-mark" />

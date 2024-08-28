@@ -3,27 +3,17 @@ import axios from 'axios';
 const API_URL = 'http://localhost:5000/api/chats';
 
 // Fetch all chats
-// export const fetchChats = async () => {
-//   try {
-//     const response = await axios.get(API_URL);
-//     return response.data;
-//   } catch (error) {
-//     console.error("Error fetching chats", error);
-//     // throw error;
-//     return [];
-//   }
-// };
-
-// Fetch all chats
 export const fetchChats = async () => {
   try {
     const response = await fetch(API_URL);
     const data = await response.json();
+    console.log("Data ", data);
+
     return data.map(chat => ({
-      id: chat.id,
+      id: chat._id,
       name: chat.name,
       avatar: chat.avatar,
-      lastMessage: chat.lastMessage,
+      lastMessage: chat.lastMessages,
       time: chat.time,
     }));
   } catch (error) {
